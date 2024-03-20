@@ -10,7 +10,6 @@ class UserAttendanceLineChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Tarih ve o tarihte katılan farklı kullanıcı sayısını eşleştiren Map
     Map<DateTime, Set<String>> userAttendancePerDay = {};
 
     for (var reservation in reservations) {

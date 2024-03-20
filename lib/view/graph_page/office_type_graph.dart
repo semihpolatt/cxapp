@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:get/get.dart';
 
-class LineChartPage extends StatefulWidget {
+class OfficeTypePage extends StatefulWidget {
   final List<Reservation> reservations;
 
-  const LineChartPage({Key? key, required this.reservations}) : super(key: key);
+  const OfficeTypePage({Key? key, required this.reservations})
+      : super(key: key);
 
   @override
-  _LineChartPageState createState() => _LineChartPageState();
+  _OfficeTypePageState createState() => _OfficeTypePageState();
 }
 
-class _LineChartPageState extends State<LineChartPage> {
+class _OfficeTypePageState extends State<OfficeTypePage> {
   late List<FlSpot> deskSpots;
   late List<FlSpot> roomSpots;
   late List<FlSpot> officeSpots;

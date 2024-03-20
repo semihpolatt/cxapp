@@ -1,5 +1,5 @@
 import 'package:cxapp/controllers/data_controller.dart';
-import 'package:cxapp/view/graph_page/graph_example3.dart';
+import 'package:cxapp/view/graph_page/office_type_graph.dart';
 import 'package:cxapp/view/graph_page/user_graph.dart';
 import 'package:cxapp/view/home_page/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
@@ -205,13 +205,9 @@ class HomePage extends StatelessWidget {
                         Obx(() {
                           if (Get.find<DataController>().isLoading.value ==
                               false) {
-                            return LineChartPage(
+                            return OfficeTypePage(
                               reservations: Get.find<DataController>().xModel,
                             );
-
-                            /*   return UserAttendanceLineChart(
-                          reservations: Get.find<DataController>().xModel,
-                        ); */
                           } else {
                             return const CircularProgressIndicator();
                           }
@@ -278,18 +274,6 @@ class HomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  /* GetBuilder<DataController>(
-                          builder: (controller) {
-                            if (controller.isLoading.value == false) {
-                              return GraphExample3(
-                                reservations: controller.xModel,
-                              );
-                            } else {
-                              return const CircularProgressIndicator();
-                            }
-                          },
-                        ) */
-
                   CardWidget(
                     title: 'Office Count',
                     count:
